@@ -18,7 +18,6 @@ if (isDescendingOrder($array)) {
                 $array[$i - 1] = $temp;
                 // $array[$i - 1] = $array[$i];
                 // $result[] = $array;
-                //
                 array_push($result, $array);
             }
         }
