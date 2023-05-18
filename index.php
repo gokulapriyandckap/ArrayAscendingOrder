@@ -1,9 +1,9 @@
 <?php
-// timestamp: 3:00
+
 // $array = [5, 2, 1];
 $array = [1, 2, 5];
 echo isDescendingOrder($array);
-// $array = [4, 1, 2, 5];
+
 $result = [];
 if (isDescendingOrder($array)) {
     echo "The array is already arranged in descending order.";
