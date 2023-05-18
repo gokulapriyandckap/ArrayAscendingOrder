@@ -7,23 +7,26 @@ echo isDescendingOrder($array);
 $result = [];
 if (isDescendingOrder($array)) {
     echo "The array is already arranged in descending order.";
-} else {
+}
+ else {
+    // echo "the array is not in desceing order";
     do {
-        for ($i =  count($array) - 1; $i = 0; $i--) {
-            // echo $i;
-            if ($array[$i] > $array[$i - 1]) {
+        for ($i =  count($array)- 1; $i >= 0; $i--) {
+            if ($i == 0 ) {
+                // $i = count($array)- 1;
+                break;
+            }
+             if ($array[$i] > $array[$i - 1]) {
                 $temp = $array[$i];
-                // $temp = $array[$i - 1];
                 $array[$i] = $array[$i - 1];
                 $array[$i - 1] = $temp;
-                // $array[$i - 1] = $array[$i];
-                // $result[] = $array;
                 array_push($result, $array);
             }
         }
+     print_r($result);  
+
     }
      while (isDescendingOrder($array));
-    print_r($result);
 }
 function isDescendingOrder($array)
 {
